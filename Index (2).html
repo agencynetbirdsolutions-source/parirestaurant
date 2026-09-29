@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pari Restaurant – Family Restaurant & Delicious Food</title>
+<meta name="description" content="Pari Restaurant is a welcoming family restaurant serving delicious food, comfortable dining and friendly service.">
+<style>
+:root{--red:#a51d2d;--deep:#240b0e;--cream:#fff8ef;--gold:#d7a84a;--ink:#21191a;--muted:#6f6260;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.topbar{background:var(--deep);color:#fff;padding:9px 0;font-size:13px;text-align:center}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,248,239,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(36,11,14,.08)}
+.nav-inner{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:Georgia,serif;font-size:28px;font-weight:800;color:var(--red)}
+.navlinks{display:flex;gap:26px;font-size:14px;font-weight:700}
+.navlinks a:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:999px;background:var(--red);color:#fff;font-weight:800;box-shadow:0 10px 24px rgba(165,29,45,.22);transition:.2s}
+.btn:hover{transform:translateY(-2px);background:#871522}
+.btn.light{background:#fff;color:var(--red);box-shadow:none}
+.hero{position:relative;min-height:620px;display:grid;place-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(36,11,14,.88),rgba(36,11,14,.38)),url('pari.png') center/cover no-repeat}
+.hero-content{width:min(1120px,92%);padding:90px 0;color:#fff}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.35);padding:7px 13px;border-radius:999px;font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.12}
+h1{font-size:clamp(44px,7vw,78px);max-width:780px;margin:0 0 20px}
+.hero p{max-width:650px;font-size:18px;color:#f9eae2;margin:0 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:82px 0}
+.section-head{max-width:720px;margin:0 auto 42px;text-align:center}
+.kicker{color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:2px;font-size:12px}
+h2{font-size:clamp(34px,5vw,52px);margin:10px 0 14px}
+.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid rgba(36,11,14,.08);border-radius:22px;padding:28px;box-shadow:0 14px 35px rgba(52,28,22,.07)}
+.icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#fff1e3;color:var(--red);font-size:22px;margin-bottom:18px}
+.card h3{font-size:25px;margin:0 0 9px}
+.card p{color:var(--muted);margin:0}
+.about{background:#fff}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-img{min-height:460px;border-radius:28px;background:linear-gradient(0deg,rgba(36,11,14,.18),rgba(36,11,14,.08)),url('pari.png') center/cover no-repeat;box-shadow:0 25px 60px rgba(52,28,22,.15)}
+.about h2{margin-top:8px}
+.checks{padding:0;margin:25px 0;list-style:none;display:grid;gap:10px}
+.checks li:before{content:"✓";color:var(--red);font-weight:900;margin-right:10px}
+.offer{background:var(--deep);color:#fff}
+.offer-wrap{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.offer h2{margin:8px 0 12px}
+.offer p{color:#eadbd6;max-width:650px}
+.contact{background:#fff}
+.contact-box{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+.contact-card{background:var(--cream);border-radius:24px;padding:32px}
+.contact-card h3{font-size:30px;margin-top:0}
+.contact-card p{color:var(--muted)}
+.info{display:grid;gap:15px}
+.info div{padding:15px 0;border-bottom:1px solid rgba(36,11,14,.1)}
+.info strong{display:block;color:var(--red);font-size:12px;text-transform:uppercase;letter-spacing:1px}
+footer{background:#160709;color:#d8c7c2;padding:28px 0;text-align:center;font-size:13px}
+footer strong{color:#fff}
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:30}
+@media(max-width:820px){
+.navlinks{display:none}.nav-inner{height:64px}
+.hero{min-height:590px}.hero-content{padding:70px 0}
+.grid,.about-wrap,.contact-box{grid-template-columns:1fr}
+.about-img{min-height:360px}
+.offer-wrap{display:block}.offer .btn{margin-top:10px}
+}
+</style>
+<style>
+.top-phone-banner{width:100%;background:#120b06;text-align:center;line-height:0;overflow:hidden}
+.top-phone-banner img{display:block;width:100%;max-width:736px;height:auto;margin:0 auto}
+</style>
+</head>
+<body>
+<div class="top-phone-banner"><img src="pari.png" alt="Pari Restaurant Phone Banner"></div>
+<div class="topbar">Welcome to Pari Restaurant • Fresh Food • Hospitality • Family Dining</div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">Pari Restaurant</a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#specials">Specials</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="https://wa.me/15554703730?text=Please%20Share%20Details">WhatsApp</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-content">
+    <span class="badge">Trusted Family Restaurant</span>
+    <h1>Good Food, Warm Moments, Pari Restaurant.</h1>
+    <p>At Pari Restaurant, we bring together comforting flavours, a welcoming atmosphere and friendly service for family meals, casual dining and special moments. Enjoy delicious food in a place made to feel easy, relaxed and memorable.</p>
+    <div class="actions">
+      <a class="btn" href="https://wa.me/15554703730?text=Please%20Share%20Details">Order / Enquire on WhatsApp</a>
+      <a class="btn light" href="#specials">Explore Pari Restaurant</a>
+    </div>
+  </div>
+</header>
+
+<section id="specials">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Why Pari Restaurant</div>
+      <h2>A Simple Place for Great Dining</h2>
+      <p>We focus on the things that matter when you choose a restaurant: enjoyable food, comfortable surroundings, attentive service and an experience you are happy to share.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="icon">🍽</div>
+        <h3>Delicious Food</h3>
+        <p>Choose from satisfying restaurant favourites prepared to make every meal enjoyable. Pari Restaurant is built around flavour, comfort and food worth coming back for.</p>
+      </article>
+      <article class="card">
+        <div class="icon">👨‍👩‍👧‍👦</div>
+        <h3>Family Friendly</h3>
+        <p>Whether it is a family meal, a casual get-together or a simple dinner, Pari Restaurant offers a welcoming setting where everyone can relax and enjoy time together.</p>
+      </article>
+      <article class="card">
+        <div class="icon">✨</div>
+        <h3>Warm Service</h3>
+        <p>From your first visit to your next meal, our focus is friendly hospitality and a smooth dining experience. Need details before visiting? Just message Pari Restaurant.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-wrap">
+    <div class="about-img" role="img" aria-label="Pari Restaurant"></div>
+    <div>
+      <div class="kicker">About Pari Restaurant</div>
+      <h2>Made for Meals You Remember</h2>
+      <p>Pari Restaurant is a comfortable destination for people who enjoy good food and genuine hospitality. Our approach is simple: create a pleasant dining environment, serve food with care and make every guest feel welcome.</p>
+      <p>Whether you are planning a family outing, meeting friends or looking for a relaxed place to enjoy your meal, Pari Restaurant is ready to welcome you.</p>
+      <ul class="checks">
+        <li>Comfortable family dining atmosphere</li>
+        <li>Food-focused menu and satisfying choices</li>
+        <li>Friendly and approachable service</li>
+        <li>Easy enquiries through WhatsApp</li>
+      </ul>
+      <a class="btn" href="https://wa.me/15554703730?text=Please%20Share%20Details">Ask Pari Restaurant</a>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Togetherness</h2>
+    </div>
+    <div class="card" style="max-width:900px;margin:auto">
+      <p>At Pari Restaurant, every visit is about more than simply filling a table. It is about creating a comfortable moment around food, conversation and togetherness. Our restaurant is designed for guests who want a relaxed place to sit, enjoy their meal and spend quality time with the people they care about. From everyday lunches and dinners to casual celebrations and weekend plans, Pari Restaurant keeps the experience welcoming and uncomplicated.</p>
+      <p>We understand that choosing a restaurant often comes down to small details: food that feels satisfying, a clean and comfortable environment, helpful service and clear information before you arrive. That is why Pari Restaurant keeps guest convenience at the centre of the experience. If you want to know more about the menu, current food offer or restaurant details, simply send us a WhatsApp message.</p>
+      <p>Pari Restaurant is a place where families, friends and food lovers can meet, relax and enjoy their time together. Whether you are visiting for a quick meal or planning a longer gathering, we are happy to help with your enquiry. Message Pari Restaurant today and ask for the details you need before your next visit. We look forward to welcoming you for a memorable dining experience.</p>
+    </div>
+  </div>
+</section>
+
+<section class="offer">
+  <div class="container offer-wrap">
+    <div>
+      <div class="kicker" style="color:#e7bd67">Special Offer</div>
+      <h2>Flat 10% Off on Food</h2>
+      <p>Planning your next meal at Pari Restaurant? Contact us on WhatsApp to ask for details about the current offer, menu and dining information before you visit.</p>
+    </div>
+    <a class="btn light" href="https://wa.me/15554703730?text=Please%20Share%20Details">Get Details on WhatsApp</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Contact Pari Restaurant</div>
+      <h2>Have a Question? Let's Talk.</h2>
+      <p>For menu details, offers, dining information or any restaurant enquiry, send a WhatsApp message and our team can share the details with you.</p>
+    </div>
+    <div class="contact-box">
+      <div class="contact-card">
+        <h3>Message Pari Restaurant</h3>
+        <p>Use the WhatsApp button to quickly request details. The message is already prepared, so you can start your enquiry in one tap.</p>
+        <a class="btn" href="https://wa.me/15554703730?text=Please%20Share%20Details">Please Share Details</a>
+      </div>
+      <div class="contact-card">
+        <div class="info">
+          <div><strong>Restaurant</strong>Pari Restaurant</div>
+          <div><strong>Experience</strong>Family Dining & Restaurant Food</div>
+          <div><strong>Enquiries</strong>WhatsApp Support</div>
+          <div><strong>Message</strong>Please Share Details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container"><strong>Pari Restaurant</strong> • Good Food • Warm Hospitality • Family Moments</div>
+</footer>
+
+<a class="btn float-wa" href="https://wa.me/15554703730?text=Please%20Share%20Details" aria-label="Contact Pari Restaurant on WhatsApp">WhatsApp</a>
+</body>
+</html>
