@@ -1,0 +1,148 @@
+/* ---------- Reset / Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --base: #ffffff;
+  --contrast: #111111;
+  --accent-4: #686868;
+  --accent-5: #fbfaf3;
+  --page-gradient: linear-gradient(135deg, #ffffff 0%, #fbfaf3 100%);
+  --content-width: 900px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--base);
+  color: var(--contrast);
+  font-family: Manrope, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: -0.1px;
+  line-height: 1.5;
+}
+
+/* ---------- Layout ---------- */
+.page {
+  background: var(--page-gradient);
+  padding: 30px clamp(20px, 5vw, 50px);
+}
+
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ---------- Images ---------- */
+.logo-link {
+  display: block;
+  text-align: center;
+}
+
+.logo-link img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.logo-wide {
+  width: 820px;
+}
+
+.logo-square {
+  width: 400px;
+}
+
+/* ---------- Policy Content ---------- */
+.policy {
+  width: 100%;
+  text-align: left;
+}
+
+.policy h1,
+.policy h2 {
+  font-weight: 400;
+  letter-spacing: -0.1px;
+  line-height: 1.15;
+}
+
+.policy h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin: 0 0 1rem;
+}
+
+.policy h2 {
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+  margin: 2rem 0 0.75rem;
+}
+
+.policy p {
+  margin: 0 0 1rem;
+  text-wrap: pretty;
+}
+
+.policy strong {
+  font-weight: 700;
+}
+
+.policy ul {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.policy li {
+  margin-bottom: 0.35rem;
+}
+
+.policy a {
+  color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.1em;
+}
+
+.policy a:hover {
+  text-decoration: none;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: #f1f1f1;
+  color: #222;
+  text-align: right;
+  padding: 13px;
+  font-size: 12px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .logo-square {
+    width: 260px;
+  }
+
+  .site-footer {
+    text-align: center;
+  }
+}
